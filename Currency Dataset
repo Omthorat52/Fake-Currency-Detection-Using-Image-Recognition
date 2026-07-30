@@ -1,2 +1,3 @@
 Dataset link:
+```bash
 kaggle kernels pull kerneler/starter-indian-currency-note-images-f2ab9d26-d
