@@ -1,40 +1,65 @@
-# Fake Currency Detection Using OpenCV
+# Fake Currency Detection Using Image Recognition
 
-## Overview
-This project is a computer vision-based fake currency detection system that uses image processing and feature matching techniques to identify whether a currency note is genuine or potentially fake.
+## 📌 Overview
 
-The system captures an image of a currency note using a camera, extracts important visual features, detects edges and contours, and compares the captured image with a known genuine currency image using ORB (Oriented FAST and Rotated BRIEF) feature matching.
+Fake currency detection is an important application of computer vision that helps identify counterfeit notes. This project uses **image recognition and feature matching techniques** to analyze currency images and determine whether the given note matches a genuine reference image.
 
-## Features
-- Real-time image capture using a webcam
-- Edge detection using Canny algorithm
-- Contour detection for object analysis
-- Feature extraction using ORB
+The system captures a currency image using a webcam, processes it using **OpenCV**, extracts important visual features using **ORB (Oriented FAST and Rotated BRIEF)**, and compares those features with a genuine currency image to detect authenticity.
+
+---
+
+## 🚀 Features
+
+- Real-time currency image capture using a webcam
+- Image preprocessing using grayscale conversion
+- Noise reduction using Gaussian Blur
+- Edge detection using the Canny algorithm
+- Contour detection for currency analysis
+- ORB feature extraction for image recognition
 - Feature matching using Brute Force Matcher
-- Compares captured currency with a reference genuine currency image
-- Displays detected edges and contours for visualization
+- Real-time detection result
+- Visualization of detected edges and contours
 
-## Technologies Used
-- Python
-- OpenCV
-- NumPy
-- Computer Vision
-- Image Processing
+---
 
-## How It Works
-1. Capture an image of the currency note using the camera.
-2. Convert the image into grayscale format.
-3. Apply Gaussian Blur to reduce noise.
-4. Detect edges using the Canny edge detector.
-5. Extract features from the captured image and reference image using ORB.
-6. Match features using the Brute Force Matcher.
-7. Analyze the number of successful matches:
-   - More matches → Genuine currency detected
-   - Fewer matches → Fake currency or insufficient matching features
+## 🛠️ Technologies Used
 
-## Installation
+- **Programming Language:** Python
+- **Computer Vision Library:** OpenCV
+- **Numerical Processing:** NumPy
+- **Techniques Used:**
+  - Image Processing
+  - Edge Detection
+  - Contour Detection
+  - Feature Extraction
+  - Feature Matching
 
-### 1. Clone the Repository
+---
 
-```bash
-git clone https://github.com/Omthorat52/Fake-Currency-Detection-Using-Image-Recognition.git
+## ⚙️ How It Works
+
+The working process of this project is divided into the following steps:
+
+### 1. Image Capture
+The system captures an image of the currency note using a webcam.
+
+### 2. Image Preprocessing
+- Converts the captured image into grayscale.
+- Applies Gaussian Blur to reduce noise.
+
+### 3. Edge and Contour Detection
+- Uses the Canny edge detection algorithm to identify important edges.
+- Detects contours to analyze the shape and boundaries of the currency.
+
+### 4. Feature Extraction
+- ORB algorithm extracts key features from:
+  - Captured currency image
+  - Genuine reference currency image
+
+### 5. Feature Matching
+- Brute Force Matcher compares extracted features between both images.
+- The number of successful matches determines whether the currency is genuine or suspicious.
+
+### 6. Result Generation
+
+- If enough feature matches are found:
